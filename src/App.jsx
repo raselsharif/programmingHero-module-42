@@ -1,19 +1,18 @@
-import './App.css'
-import Blogs from './assets/components/Blogs/Blogs'
-import BookMark from './assets/components/BookMark/BookMark'
-import Header from './assets/components/Header/Header'
+import "./App.css";
+import Blogs from "./assets/components/Blogs/Blogs";
+import BookMark from "./assets/components/BookMark/BookMark";
+import Header from "./assets/components/Header/Header";
 
 function App() {
-
   return (
     <>
       <Header></Header>
-      <main className='md:flex container mx-auto py-6'>
+      <main className="md:flex container mx-auto py-6 gap-8">
         <Blogs></Blogs>
         <BookMark></BookMark>
       </main>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
