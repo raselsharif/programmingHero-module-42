@@ -1,12 +1,17 @@
 import './App.css'
 import Blogs from './assets/components/Blogs/Blogs'
+import BookMark from './assets/components/BookMark/BookMark'
+import Header from './assets/components/Header/Header'
 
 function App() {
 
   return (
     <>
-     <h1 className='text-3xl'>Knowlege Cafe</h1>
-     <Blogs></Blogs>
+      <Header></Header>
+      <main className='md:flex container mx-auto py-6'>
+        <Blogs></Blogs>
+        <BookMark></BookMark>
+      </main>
     </>
   )
 }
