@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
-function Blog({ blog }) {
-  console.log(blog);
+function Blog({ blog, handleBookmarks }) {
+  //   console.log(blog);
   const {
     title,
     cover,
@@ -22,7 +22,10 @@ function Blog({ blog }) {
             <p>{posted_date}</p>
           </div>
         </div>
-        <p>{reading_time} min read</p>
+        <div>
+          <p>{reading_time} min read</p>
+          <button onClick={handleBookmarks}>Mark</button>
+        </div>
       </div>
       <h1 className="text-5xl my-6">{title}</h1>
       <p>
