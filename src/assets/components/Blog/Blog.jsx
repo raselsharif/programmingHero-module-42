@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 function Blog({ blog, handleBookmarks, handleReadTime }) {
   // console.log(handleReadTime);
   const {
+    id,
     title,
     cover,
     author,
@@ -35,7 +36,7 @@ function Blog({ blog, handleBookmarks, handleReadTime }) {
           </span>
         ))}
       </p>
-      <button className="bg-red-600 px-4 py-2 text-white mt-2" onClick={() => handleReadTime(reading_time)}>Mark As Read</button>
+      <button className="bg-red-600 px-4 py-2 text-white mt-2" onClick={() => handleReadTime(reading_time, id)}>Mark As Read</button>
     </div>
   );
 }
