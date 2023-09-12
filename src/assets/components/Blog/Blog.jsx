@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
-function Blog({ blog, handleBookmarks }) {
-  //   console.log(blog);
+function Blog({ blog, handleBookmarks, handleReadTime }) {
+  // console.log(handleReadTime);
   const {
     title,
     cover,
@@ -24,7 +24,7 @@ function Blog({ blog, handleBookmarks }) {
         </div>
         <div>
           <p>{reading_time} min read</p>
-          <button className="bg-red-500 text-white px-2 rounded-md" onClick={() => handleBookmarks(blog)}>Mark</button>
+          <button className="bg-red-500 text-white px-2 rounded-md" onClick={() => handleBookmarks(blog)}>Bookmark</button>
         </div>
       </div>
       <h1 className="text-5xl my-6">{title}</h1>
@@ -35,6 +35,7 @@ function Blog({ blog, handleBookmarks }) {
           </span>
         ))}
       </p>
+      <button className="bg-red-600 px-4 py-2 text-white mt-2" onClick={() => handleReadTime(reading_time)}>Mark As Read</button>
     </div>
   );
 }

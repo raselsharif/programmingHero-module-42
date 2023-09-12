@@ -6,17 +6,22 @@ import Header from "./assets/components/Header/Header";
 
 function App() {
   const [bookmarks, setBookmarks] = useState([]);
+  const [readTime, setReadTime] = useState(0)
 
   const handleBookmarks = (blog) => {
     const newBookmarks = [...bookmarks, blog];
     setBookmarks(newBookmarks)
   };
+
+  const handleReadTime = time => {
+    setReadTime(readTime + time)
+  }
   return (
     <>
       <Header></Header>
       <main className="md:flex container mx-auto py-6 gap-8">
-        <Blogs handleBookmarks={handleBookmarks}></Blogs>
-        <BookMark bookmarks={bookmarks}></BookMark>
+        <Blogs handleBookmarks={handleBookmarks} handleReadTime={handleReadTime}></Blogs>
+        <BookMark bookmarks={bookmarks} readTime={readTime}></BookMark>
       </main>
     </>
   );
