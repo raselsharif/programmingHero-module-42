@@ -24,7 +24,7 @@ function Blog({ blog, handleBookmarks }) {
         </div>
         <div>
           <p>{reading_time} min read</p>
-          <button onClick={handleBookmarks}>Mark</button>
+          <button className="bg-red-500 text-white px-2 rounded-md" onClick={() => handleBookmarks(blog)}>Mark</button>
         </div>
       </div>
       <h1 className="text-5xl my-6">{title}</h1>

@@ -5,17 +5,18 @@ import BookMark from "./assets/components/BookMark/BookMark";
 import Header from "./assets/components/Header/Header";
 
 function App() {
-  const [bookmarks, setBookmars] = useState([]);
+  const [bookmarks, setBookmarks] = useState([]);
 
   const handleBookmarks = (blog) => {
-    console.log("bookmark will be added ");
+    const newBookmarks = [...bookmarks, blog];
+    setBookmarks(newBookmarks)
   };
   return (
     <>
       <Header></Header>
       <main className="md:flex container mx-auto py-6 gap-8">
         <Blogs handleBookmarks={handleBookmarks}></Blogs>
-        <BookMark></BookMark>
+        <BookMark bookmarks={bookmarks}></BookMark>
       </main>
     </>
   );
